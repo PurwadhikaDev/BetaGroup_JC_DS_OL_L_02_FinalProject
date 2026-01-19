@@ -15,7 +15,7 @@ st.markdown("Masukkan data pelanggan sesuai parameter di bawah untuk melihat pre
 
 # --- 2. MAPPING KATEGORI ---
 mapping = {
-    "Complain": {"Tidak": 0, "Ya": 1},  # Complain: 0=No Complain, 1=Yes (tapi ini sudah binary)
+    "Complain": {"Tidak": 0, "Ya": 1},  # Complain: 0=No Complain, 1=Yes
     "MaritalStatus": {"Divorced": 0, "Married": 1, "Single": 2},  # LabelEncoder urutan alphabetical: Divorced, Married, Single
     "PreferedOrderCat": {"Fashion": 0, "Grocery": 1, "Laptop & Accessory": 2, "Mobile Phone": 3, "Others": 4},  # LabelEncoder urutan alphabetical
     "PreferredPaymentMode": {"Cash on Delivery": 0, "Credit Card": 1, "Debit Card": 2, "E wallet": 3, "UPI": 4},  # LabelEncoder urutan alphabetical
@@ -132,4 +132,5 @@ if submitted:
         st.write(f"Tingkat Keyakinan Model: **{probability[1]:.2%}**")
     else:
         st.success(f"### ✅ HASIL: PELANGGAN TETAP SETIA (LOYAL)")
+
         st.write(f"Tingkat Keyakinan Model: **{probability[0]:.2%}**")
